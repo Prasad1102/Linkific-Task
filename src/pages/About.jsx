@@ -12,11 +12,18 @@ export default function About() {
         About Us
       </Typography>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
+        <Grid item>
           <Typography variant="h6" paragraph>
-            Linkific is a fictitious company created to demonstrate a clean,
-            responsive React project using Material UI components. We focus on
-            design, performance, and developer experience.
+            Linkific is a modern digital solutions company focused on building
+            clean, scalable, and user-friendly web platforms. Our goal is to
+            help businesses simplify their processes and move faster by using
+            well-designed software. We create products that are easy to use,
+            visually consistent, and built with reliable technology. This
+            project demonstrates how a real company website can be structured
+            using React and Material UI. The About page highlights our approach
+            to quality design, performance, and clear user experience. Our work
+            includes building responsive layouts, meaningful content sections,
+            and flexible components that can adapt to different business needs.
           </Typography>
           <Typography variant="body1" color="text.secondary">
             This page contains static content laid out using Material UI's Grid,

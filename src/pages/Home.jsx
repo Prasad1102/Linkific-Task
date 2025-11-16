@@ -51,7 +51,7 @@ export default function Home() {
       {/* Hero */}
       <SectionWrapper>
         <Grid container spacing={4} alignItems="center">
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h2" component="h1" sx={{ fontWeight: 700 }}>
               Build and scale your online courses with confidence
             </Typography>
@@ -78,7 +78,7 @@ export default function Home() {
             </Button>
           </Grid>
 
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Box
               component="img"
               src="/images/hero.png"
@@ -96,7 +96,7 @@ export default function Home() {
         </Typography>
         <Grid container spacing={3}>
           {features.map((f) => (
-            <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={f.title}>
+            <Grid item xs={12} sm={6} md={4} key={f.title}>
               <CardItem
                 title={f.title}
                 description={f.description}
@@ -110,7 +110,7 @@ export default function Home() {
       {/* Why Choose Us */}
       <SectionWrapper sx={{ backgroundColor: '#f6f8fb' }}>
         <Grid container spacing={4} alignItems="center">
-          <Grid item size={{ xs: 12 }}>
+          <Grid item xs={12}>
             <Typography variant="h4" sx={{ fontWeight: 700 }}>
               Why leading educators choose Linkific
             </Typography>
@@ -144,7 +144,7 @@ export default function Home() {
         </Typography>
         <Grid container spacing={3}>
           {testimonials.map((t) => (
-            <Grid item size={{ xs: 12, md: 6 }} key={t.name}>
+            <Grid item xs={12} md={6} key={t.name}>
               <Paper sx={{ p: 3 }} elevation={1}>
                 <Grid container spacing={2} alignItems="center">
                   <Grid item>

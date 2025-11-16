@@ -28,7 +28,7 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Grid container spacing={4}>
-          <Grid item size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom sx={{ fontWeight: 700 }}>
               Linkific
             </Typography>
@@ -38,7 +38,7 @@ export default function Footer() {
             </Typography>
           </Grid>
 
-          <Grid item size={{ xs: 6, sm: 4, md: 2 }}>
+          <Grid item xs={6} sm={4} md={2}>
             <Typography variant="subtitle1" gutterBottom>
               Quick Links
             </Typography>
@@ -61,7 +61,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          <Grid item size={{ xs: 6, sm: 4, md: 3 }}>
+          <Grid item xs={6} sm={4} md={3}>
             <Typography variant="subtitle1" gutterBottom>
               Services
             </Typography>
@@ -73,7 +73,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          <Grid item size={{ xs: 12, sm: 12, md: 3 }}>
+          <Grid item xs={12} sm={12} md={3}>
             <Typography variant="subtitle1" gutterBottom>
               Contact
             </Typography>

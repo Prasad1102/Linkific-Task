@@ -22,7 +22,7 @@ export default function Contact() {
         sx={{ backgroundColor: '#0f1724', color: 'common.white' }}
       >
         <Grid container spacing={4} alignItems="center">
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
               Get in touch
             </Typography>
@@ -41,7 +41,7 @@ export default function Contact() {
             </Stack>
           </Grid>
 
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Box
               component="img"
               src="/images/service.png"
@@ -58,19 +58,19 @@ export default function Contact() {
         </Typography>
         <Paper sx={{ p: 3 }} elevation={2}>
           <Grid container spacing={2}>
-            <Grid item size={{ xs: 12, md: 6 }}>
+            <Grid item xs={12} md={6}>
               <TextField label="Name" fullWidth />
             </Grid>
-            <Grid item size={{ xs: 12, md: 6 }}>
+            <Grid item xs={12} md={6}>
               <TextField label="Email" fullWidth />
             </Grid>
-            <Grid item size={{ md: 12 }}>
+            <Grid item md={12}>
               <TextField label="Phone" fullWidth />
             </Grid>
-            <Grid item size={{ xs: 12 }}>
+            <Grid item xs={12}>
               <TextField label="Message" fullWidth multiline rows={5} />
             </Grid>
-            <Grid item size={{ xs: 12 }}>
+            <Grid item xs={12}>
               <Button variant="contained" size="large">
                 Send Message
               </Button>

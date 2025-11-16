@@ -34,7 +34,7 @@ export default function Services() {
         sx={{ backgroundColor: '#0f1724', color: 'common.white' }}
       >
         <Grid container spacing={4} alignItems="center">
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
               Services designed for scalable teams
             </Typography>
@@ -49,7 +49,7 @@ export default function Services() {
             </Stack>
           </Grid>
 
-          <Grid item size={{ xs: 12, md: 6 }}>
+          <Grid item xs={12} md={6}>
             <Box
               component="img"
               src="/images/service.png"
@@ -66,7 +66,7 @@ export default function Services() {
         </Typography>
         <Grid container spacing={3}>
           {services.map((s) => (
-            <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={s.title}>
+            <Grid item xs={12} sm={6} md={4} key={s.title}>
               <CardItem
                 title={s.title}
                 description={s.description}
@@ -82,7 +82,7 @@ export default function Services() {
           How we work
         </Typography>
         <Grid container spacing={3}>
-          <Grid item size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ fontWeight: 700 }}>
               Discovery
             </Typography>
@@ -91,7 +91,7 @@ export default function Services() {
               roadmap.
             </Typography>
           </Grid>
-          <Grid item size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ fontWeight: 700 }}>
               Build
             </Typography>
@@ -99,7 +99,7 @@ export default function Services() {
               Iterative delivery with frequent demos and clear milestones.
             </Typography>
           </Grid>
-          <Grid item size={{ xs: 12, md: 4 }}>
+          <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ fontWeight: 700 }}>
               Scale
             </Typography>

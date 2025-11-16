@@ -38,11 +38,16 @@ export default function Portfolio() {
       </Typography>
       <Grid container spacing={3}>
         {projects.map((p) => (
-          <Grid item size={{xs: 12, sm: 6, md: 4}} key={p.title}>
-            <CardItem title={p.title} description={`${p.category} — ${p.description}`} image={p.image} actions={<Button size="small">View Project</Button>} />
+          <Grid item xs={12} sm={6} md={4} key={p.title}>
+            <CardItem
+              title={p.title}
+              description={`${p.category} — ${p.description}`}
+              image={p.image}
+              actions={<Button size="small">View Project</Button>}
+            />
           </Grid>
         ))}
       </Grid>
     </SectionWrapper>
-  )
+  );
 }

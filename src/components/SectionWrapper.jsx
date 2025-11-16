@@ -1,26 +1,35 @@
 import React from 'react'
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material';
 
 /**
  * SectionWrapper - A layout wrapper that allows full-width backgrounds while
  * keeping inner content constrained to a readable width.
  *
+ * This implementation uses an outer full-width Box that accepts background
+ * styles via `sx`. The inner content is centered using a constrained Box
+ * with a maxWidth and horizontal padding. This ensures the background spans
+ * the full viewport while content remains visually centered.
+ *
  * Props:
  * - children: node content
  * - sx: optional sx overrides applied to the outer full-width Box
- *
- * The inner Container is constrained to 1200px and centered. Default vertical
- * padding is generous to create a premium, airy layout.
  */
 export default function SectionWrapper({ children, sx = {} }) {
   return (
-    // Outer box fills the full width and accepts background styles via sx
     <Box
       component="section"
       sx={{ width: '100%', py: { xs: 3, md: 6 }, ...sx }}
     >
-      {/* Inner container is constrained to a fixed max width and centered */}
-      <Container sx={{ maxWidth: '1200px', mx: 'auto' }}>{children}</Container>
+      <Box
+        sx={{
+          maxWidth: 1200,
+          mx: 'auto',
+          px: { xs: 2, sm: 3 },
+          width: '100%',
+        }}
+      >
+        {children}
+      </Box>
     </Box>
   );
 }

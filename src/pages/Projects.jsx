@@ -21,8 +21,12 @@ export default function Projects() {
       </Typography>
       <Grid container spacing={3}>
         {projects.map((p) => (
-          <Grid item size={{xs: 12, sm: 6, md: 3}} key={p.title}>
-            <CardItem title={p.title} description={p.description} image={p.image} />
+          <Grid item xs={12} sm={6} md={3} key={p.title}>
+            <CardItem
+              title={p.title}
+              description={p.description}
+              image={p.image}
+            />
           </Grid>
         ))}
       </Grid>
@@ -36,10 +40,11 @@ export default function Projects() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            These expanders provide additional static information about how projects are structured in this demo.
+            These expanders provide additional static information about how
+            projects are structured in this demo.
           </Typography>
         </AccordionDetails>
       </Accordion>
     </SectionWrapper>
-  )
+  );
 }
