@@ -4,8 +4,8 @@ import Home from '../pages/Home'
 import Services from '../pages/Services'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
-import Projects from '../pages/Projects'
-import Team from '../pages/Team'
+import Portfolio from '../pages/Portfolio'
+// keep Projects if needed elsewhere; Portfolio is the primary showcase page
 
 /**
  * AppRoutes - Central route definitions for the app.
@@ -15,10 +15,11 @@ export default function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/team" element={<Team />} />
+      <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      {/* fallback to home for unknown routes */}
+      <Route path="*" element={<Home />} />
     </Routes>
-  )
+  );
 }

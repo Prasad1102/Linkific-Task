@@ -14,19 +14,17 @@ export default function About() {
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" paragraph>
-            Linkific is a fictitious company created to demonstrate a clean, responsive React
-            project using Material UI components. We focus on design, performance, and
-            developer experience.
+            Linkific is a fictitious company created to demonstrate a clean,
+            responsive React project using Material UI components. We focus on
+            design, performance, and developer experience.
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            This page contains static content laid out using Material UI's Grid, Typography
-            and responsive utilities. Images are placeholders from a public provider.
+            This page contains static content laid out using Material UI's Grid,
+            Typography and responsive utilities. Images are placeholders from a
+            public provider.
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box component="img" src="https://picsum.photos/seed/about/800/600" alt="About" sx={{ width: '100%', borderRadius: 2 }} />
         </Grid>
       </Grid>
     </SectionWrapper>
-  )
+  );
 }

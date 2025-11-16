@@ -22,23 +22,23 @@ export default function Header() {
   const navItems = [
     { title: 'Home', to: '/' },
     { title: 'Services', to: '/services' },
-    { title: 'Portfolio', to: '/projects' },
+    { title: 'Portfolio', to: '/portfolio' },
     // { title: 'Team', to: '/team' },
     { title: 'About', to: '/about' },
     { title: 'Contact', to: '/contact' },
-  ]
+  ];
 
   return (
     <>
-      <AppBar position='static' color='primary'>
+      {/* sticky AppBar to remain visible on scroll */}
+      <AppBar position="sticky" color="primary" elevation={3} sx={{ top: 0 }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-
             {/* Logo for Desktop */}
             <Typography
-              variant='h6'
+              variant="h6"
               component={RouterLink}
-              to='/'
+              to="/"
               sx={{
                 color: 'inherit',
                 textDecoration: 'none',
@@ -54,9 +54,9 @@ export default function Header() {
             {/* Mobile Menu Icon */}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
               <Typography
-                variant='h6'
+                variant="h6"
                 component={RouterLink}
-                to='/'
+                to="/"
                 sx={{
                   flexGrow: 1,
                   color: 'inherit',
@@ -67,10 +67,7 @@ export default function Header() {
                 Linkific
               </Typography>
 
-              <IconButton
-                color='inherit'
-                onClick={() => setOpen(true)}
-              >
+              <IconButton color="inherit" onClick={() => setOpen(true)}>
                 <MenuIcon />
               </IconButton>
             </Box>
@@ -103,16 +100,16 @@ export default function Header() {
       </AppBar>
 
       {/* Drawer for Mobile */}
-      <Drawer
-        anchor='right'
-        open={open}
-        onClose={() => setOpen(false)}
-      >
-        <Box sx={{ width: 250 }} role='presentation'>
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+        <Box sx={{ width: 250 }} role="presentation">
           <List>
             {navItems.map((item) => (
               <ListItem key={item.title} disablePadding>
-                <ListItemButton component={RouterLink} to={item.to} onClick={() => setOpen(false)}>
+                <ListItemButton
+                  component={RouterLink}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                >
                   <ListItemText primary={item.title} />
                 </ListItemButton>
               </ListItem>
@@ -121,5 +118,5 @@ export default function Header() {
         </Box>
       </Drawer>
     </>
-  )
+  );
 }
